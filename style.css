@@ -1,5 +1,37 @@
+@keyframes cambio-color-fondo{
+    0%{
+        background-color: brown;
+    }
+    25%{
+        background-color: #939ecc;
+    }
+    50%{
+        background-color: #939ecc;
+    }
+    100%{
+        background-color: brown;
+    }
+}
+@keyframes cambio-color-borde{
+    0%{
+        border-color: #939ecc;
+    }
+    25%{
+        border-color: brown;
+    }
+    50%{
+        border-color: brown;
+    }
+    100%{
+        border-color: #939ecc;
+    }
+}
+
 body{
-    background-color: rgb(147, 158, 204);
+    animation-name: cambio-color-fondo;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
 }
 .container{
     margin-top: 30px;
@@ -9,6 +41,10 @@ body{
     align-items: center;
 }
 .contenedor{
+    animation-name: cambio-color-borde;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
     border: 2px solid white;
     border-radius: 15px;
     height: 45rem;
@@ -68,6 +104,31 @@ body{
     cursor: pointer;
 }
 .boton-entrada input:active{
+    background-color: rgb(206, 206, 206);
+}
+.boton-reinicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boton-reinicio input{
+    margin-top: 25px;
+    width: 10rem;
+    height: 35px;
+    border: none;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: width 200ms ease-in-out;
+}
+.boton-reinicio input:hover{
+    width: 13rem;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.boton-reinicio input:active{
     background-color: rgb(206, 206, 206);
 }
 .salida{
